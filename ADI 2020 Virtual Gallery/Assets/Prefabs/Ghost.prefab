@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3679067371374413200}
   - component: {fileID: 5177037486542504216}
   - component: {fileID: 4325951728144454581}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ BoxCollider:
   m_GameObject: {fileID: 5188305865800161270}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 5.5300016, y: 6.15, z: 0.20000005}
   m_Center: {x: 0, y: 0, z: 0}
