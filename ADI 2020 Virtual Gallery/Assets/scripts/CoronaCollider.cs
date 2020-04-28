@@ -20,7 +20,7 @@ public class CoronaCollider : MonoBehaviour
     	else{
     		//print(other.gameObject.tag);
     		Destroy(this.gameObject);
-    		//BadWord.SetActive(true);
+    		BadWord.SetActive(true);
     		//print("swiffered");
     	}
     	

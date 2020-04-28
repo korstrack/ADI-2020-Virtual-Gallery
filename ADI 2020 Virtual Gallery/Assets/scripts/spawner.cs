@@ -12,6 +12,7 @@ public class spawner : MonoBehaviour
     public bool isGhosts = false;
     public float minSize = 1;
     public float maxSize = 9;
+    public GameObject Exploder = null;
     #endregion
 
     // Start is called before the first frame update
@@ -40,6 +41,9 @@ public class spawner : MonoBehaviour
             if(isGhosts){
     	    	a.GetComponent<LookAtTarget>().target = camera;
 	        }
+            else{
+                a.GetComponent<CoronaCollider>().BadWord = Exploder;
+            }
         	//waiter();
             float newScale = UnityEngine.Random.Range(minSize, maxSize);
             a.transform.localScale = new Vector3(newScale, newScale, newScale);

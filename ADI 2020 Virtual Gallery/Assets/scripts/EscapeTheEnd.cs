@@ -6,6 +6,7 @@ public class EscapeTheEnd : MonoBehaviour
 {
 
 	public GameObject getOut = null;
+	public GameObject Controls = null;
 
     // Update is called once per frame
     void Update()
@@ -14,11 +15,13 @@ public class EscapeTheEnd : MonoBehaviour
         {
         	if(getOut.activeSelf){
         		getOut.SetActive(false);
+        		Controls.SetActive(false);
         		Cursor.lockState = CursorLockMode.Locked;
         		Cursor.visible = false;
         	}
         	else{
 	        	getOut.SetActive(true);
+	        	Controls.SetActive(true);
 	        	Cursor.lockState = CursorLockMode.None;
 	        	Cursor.visible = true;  	
 	        }
