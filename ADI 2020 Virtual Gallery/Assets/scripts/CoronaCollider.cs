@@ -6,22 +6,22 @@ public class CoronaCollider : MonoBehaviour
 {
 	public GameObject BadWord = null;
 
-    void OnTriggerEnter(Collider collision){
+    void OnTriggerEnter(Collider other){
     	//print("why th efuck");
     	//print("triggered");
-    	if(this.gameObject.tag == "Player"){
-    		print(collision.gameObject.tag);
-    		print("teleporting");
-    		//Vector3 newpos = new Vector3(330, 20, -13);
-    		//collision.gameObject.transform.position = new Vector3(330, 20, -13);
-    		this.gameObject.transform.position = new Vector3(330, 20, -13);
-    		//BadWord.SetActive(true);
+    	if(other.gameObject.tag == "Player"){
+    		var magnitude = 50;
+            // calculate force vector
+            var force = other.transform.position - this.gameObject.transform.position;
+            // normalize force vector to get direction only and trim magnitude
+            force.Normalize();
+            this.gameObject.GetComponent<Rigidbody>().AddForce(force * magnitude);
     	}
     	else{
-    		print(collision.gameObject.tag);
+    		//print(other.gameObject.tag);
     		Destroy(this.gameObject);
     		//BadWord.SetActive(true);
-    		print("swiffered");
+    		//print("swiffered");
     	}
     	
     }

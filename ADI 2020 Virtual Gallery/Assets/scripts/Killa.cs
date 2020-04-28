@@ -22,9 +22,9 @@ public class Killa : MonoBehaviour
     }
     
     void OnTriggerEnter(Collider other){
-    	print("wack");
+    	//print("wack");
         if(other.gameObject.tag == "Player"){
-            print("playa");
+            //print("playa");
             playa.transform.position = target.transform.position;
             //UICanvas.SetActive(true);
             BADDD.SetActive(false);
