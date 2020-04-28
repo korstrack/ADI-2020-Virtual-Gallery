@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SleepAfterFive : MonoBehaviour
 {
-    void Awake()
+    void LateUpdate()
     {
     	StartCoroutine(ExampleCoroutine());
     	

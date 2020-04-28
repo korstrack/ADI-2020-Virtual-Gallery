@@ -28,7 +28,10 @@ public class LookAtTarget : MonoBehaviour
       }
 
       void OnTriggerEnter(Collider other){
-    	Destroy(this.gameObject);
+        if(other.gameObject.tag == "KillBox"){
+          Destroy(this.gameObject);
+        }
+    	
     }
 
 }
