@@ -14,9 +14,13 @@ public class EscapeTheEnd : MonoBehaviour
         {
         	if(getOut.activeSelf){
         		getOut.SetActive(false);
+        		Cursor.lockState = CursorLockMode.Locked;
+        		Cursor.visible = false;
         	}
         	else{
-	        	getOut.SetActive(true);        	
+	        	getOut.SetActive(true);
+	        	Cursor.lockState = CursorLockMode.None;
+	        	Cursor.visible = true;  	
 	        }
         }
     }
