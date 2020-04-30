@@ -9,6 +9,10 @@ public class EscapeTheEnd : MonoBehaviour
 	public GameObject Controls = null;
 	public GameObject EscHowto = null;
 
+	void Start(){
+		Cursor.lockState = CursorLockMode.None;
+	}
+
     // Update is called once per frame
     void Update()
     {
