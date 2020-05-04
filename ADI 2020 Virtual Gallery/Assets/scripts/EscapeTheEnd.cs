@@ -8,6 +8,7 @@ public class EscapeTheEnd : MonoBehaviour
 	public GameObject getOut = null;
 	public GameObject Controls = null;
 	public GameObject EscHowto = null;
+    public GameObject QR = null;
 
 	void Start(){
 		Cursor.lockState = CursorLockMode.None;
@@ -22,6 +23,7 @@ public class EscapeTheEnd : MonoBehaviour
         		getOut.SetActive(false);
         		Controls.SetActive(false);
         		EscHowto.SetActive(false);
+                QR.SetActive(false);
         		Cursor.lockState = CursorLockMode.Locked;
         		Cursor.visible = false;
         	}
@@ -29,6 +31,7 @@ public class EscapeTheEnd : MonoBehaviour
 	        	getOut.SetActive(true);
 	        	Controls.SetActive(true);
 	        	EscHowto.SetActive(true);
+                QR.SetActive(true);
 	        	Cursor.lockState = CursorLockMode.None;
 	        	Cursor.visible = true;  	
 	        }
